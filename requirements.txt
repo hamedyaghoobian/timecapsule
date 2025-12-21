@@ -1,0 +1,18 @@
+# Historical LLM Training Pipeline (1800-1875)
+# Apple Silicon M3 Max with MPS + BFloat16
+
+# Core ML
+torch>=2.9.0
+transformers>=4.50.0
+datasets>=4.0.0
+tokenizers>=0.20.0
+accelerate>=1.0.0
+
+# Utilities
+tqdm
+numpy
+pandas
+
+# Analysis
+matplotlib
+seaborn

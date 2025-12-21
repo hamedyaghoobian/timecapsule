@@ -1,0 +1,23 @@
+# RunPod requirements for Historical LLM Training
+# Install with: pip install -r requirements_runpod.txt
+
+# Core ML
+torch>=2.1.0
+transformers>=4.36.0
+datasets>=2.16.0
+tokenizers>=0.15.0
+accelerate>=0.25.0
+
+# Flash Attention 2 (for A100/H100)
+flash-attn>=2.4.0
+
+# Monitoring
+tensorboard>=2.15.0
+wandb>=0.16.0
+
+# Utilities
+tqdm>=4.66.0
+numpy>=1.24.0
+
+# Optional: DeepSpeed for multi-GPU
+# deepspeed>=0.12.0

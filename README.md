@@ -1,0 +1,61 @@
+# Historic London LLM (1800-1875)
+
+This repository contains the training code for a 1.5B parameter language model trained on 90GB of historical English text (1800-1875).
+
+## 🚀 RunPod Setup Guide (For Students)
+
+To train this model efficiently, we recommend using **RunPod**. Follow these steps to set up your environment.
+
+### 1. Select a GPU Instance
+- **Recommended**: **1x A100 80GB** (Best performance/price balance)
+- **Alternative**: 1x H100 80GB (Faster, more expensive)
+- **Template**: Select `PyTorch 2.1` (or newer) with CUDA 12.1+.
+
+### 2. Configure Storage (CRITICAL)
+You effectively need **200GB+** of storage to hold the dataset (120GB) and checkpoints.
+- **Container Disk**: 50 GB
+- **Volume Disk**: **200 GB** (Mount path: `/workspace`)
+- *Note: If you don't add a Volume Disk, you will run out of space immediately.*
+
+### 3. Setup Environment
+Once your pod is running, open the **Web Terminal** or SSH in.
+
+```bash
+# 1. Clone this repository
+cd /workspace
+git clone https://github.com/hamedyaghoobian/london-llm-1800.git
+cd london-llm-1800
+
+# 2. Install dependencies
+pip install -r requirements.txt
+pip install flash-attn --no-build-isolation
+```
+
+## 📥 Data Download
+The dataset and tokenizer are hosted on Hugging Face. We have provided a script to download them automatically.
+
+```bash
+# Run this script to download ~120GB of data
+# Ensure you have a stable internet connection in the pod
+python src/download_data.py
+```
+This will create a `data/` directory with:
+- `data/dataset/`: The tokenized Arrow dataset
+- `data/tokenizer/`: The custom BPE tokenizer
+
+## 🏋️‍♀️ Training
+To start training the 1.5B parameter model:
+
+```bash
+python src/05_train_model_cuda.py --data_dir data --output_dir outputs
+```
+
+### Monitoring
+- **Checkpoints**: Saved to `outputs/checkpoints`
+- **Logs**: Saved to `outputs/logs` (view with `tail -f outputs/logs/training.log`)
+- **Loss**: Watch the loss curve. It should decrease from ~10.0 to <3.0 over time.
+
+## 🛠️ Advanced Info
+- **Model Config**: 1.5B params, 2048 ctx length, Flash Attention 2 enabled.
+- **Dataset**: ~240 shards of tokenized historical text.
+- **Tokenizer**: Custom BPE trained on 100M+ tokens of the corpus.
