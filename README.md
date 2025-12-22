@@ -2,7 +2,7 @@
 
 This repository contains the training code for a 1.5B parameter language model trained on 90GB of historical English text (1800-1875).
 
-## 🚀 RunPod Setup Guide (For Students)
+## RunPod Setup Guide
 
 To train this model efficiently, we recommend using **RunPod**. Follow these steps to set up your environment.
 
@@ -31,7 +31,7 @@ pip install -r requirements.txt
 pip install flash-attn --no-build-isolation
 ```
 
-## 📥 Data Download
+## Data Download
 The dataset and tokenizer are hosted on Hugging Face. We have provided a script to download them automatically.
 
 ```bash
