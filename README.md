@@ -79,5 +79,3 @@ python src/05_train_model_cuda.py --data_dir data --output_dir outputs
 ## License & Citation
 
 This project is licensed under the [MIT License](LICENSE).
-
-*(Citation information for the ACM C&C 2026 paper will be added upon publication).*
