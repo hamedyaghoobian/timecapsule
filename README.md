@@ -37,8 +37,8 @@ Once your pod is running, open the **Web Terminal** or SSH in.
 ```bash
 # 1. Clone this repository
 cd /workspace
-git clone https://github.com/hamedyaghoobian/london-llm-1800.git
-cd london-llm-1800
+git clone https://github.com/hamedyaghoobian/timecapsule.git
+cd timecapsule
 
 # 2. Install dependencies
 pip install -r requirements.txt
