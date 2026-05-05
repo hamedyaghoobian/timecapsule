@@ -1,6 +1,8 @@
-# Historic London LLM (1800-1875)
+# TimeCapsule: Generative Hallucination as a Method for Historical Sensemaking
 
-This repository contains the training code for a 1.5B parameter language model trained on 90GB of historical English text (1800-1875).
+**Authors**: Hayk Grigorian and Hamed Yaghoobian (Muhlenberg College)
+
+This repository contains the official code, dataset, and models for our paper **"TimeCapsule: Generative Hallucination as a Method for Historical Sensemaking"**, prepared for the **ACM Creativity and Cognition (C&C) 2026 Conference** in the UK ([https://cc.acm.org/2026/](https://cc.acm.org/2026/)). It includes the training pipeline for a 1.5B parameter language model trained on 90GB of historical English text (1800-1875).
 
 ## Replication & Paper Resources
 

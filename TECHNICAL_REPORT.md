@@ -1,7 +1,8 @@
-# Technical Report: Historical Language Model Training (1800-1875)
-## ACM Creativity and Cognition Submission
+# Technical Report: TimeCapsule
+## ACM Creativity and Cognition 2026 Conference
 
-**Project**: TimeCapsule LLM - A Domain-Specific Language Model for Victorian-Era English  
+**Paper Title**: TimeCapsule: Generative Hallucination as a Method for Historical Sensemaking
+**Authors**: Hayk Grigorian (Muhlenberg College), Hamed Yaghoobian (Muhlenberg College)
 **Corpus Period**: 1800-1875  
 **Total Corpus Size**: 89.63 GB (136,302 documents)  
 **Model Size**: 500M-1.5B parameters  
