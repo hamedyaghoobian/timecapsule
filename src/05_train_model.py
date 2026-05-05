@@ -35,7 +35,7 @@ sys.path.insert(0, str(Path(__file__).parent))
 from config import (
     TOKENIZER_DIR, DATASET_DIR, CHECKPOINT_DIR, LOG_DIR,
     MODEL_CONFIG, TRAINING_CONFIG, CONTEXT_LENGTH,
-    get_device, get_dtype
+    get_device, get_dtype, RANDOM_SEED
 )
 
 # ============================================================
@@ -215,6 +215,10 @@ def main():
     print("HISTORICAL LLM TRAINER (1800-1875)")
     print("MPS-Optimized for Apple Silicon M3 Max")
     print("=" * 60)
+    
+    # Set global random seed for replication
+    import transformers
+    transformers.set_seed(RANDOM_SEED)
     
     # Device info
     device = get_device()

@@ -14,6 +14,10 @@ import argparse
 from pathlib import Path
 from datetime import datetime
 
+# Add src to path for config import
+sys.path.insert(0, str(Path(__file__).parent))
+from config import RANDOM_SEED
+
 # ===========================================================
 # CUDA CONFIGURATION (set before importing torch)
 # ===========================================================
@@ -112,7 +116,7 @@ TRAINING_CONFIG = {
     # Other
     "remove_unused_columns": False,
     "report_to": "tensorboard",
-    "seed": 42,
+    "seed": RANDOM_SEED,
 }
 
 
@@ -176,6 +180,10 @@ def main():
     print("HISTORICAL LLM TRAINER (1800-1875)")
     print("RunPod CUDA-Optimized Version")
     print("=" * 60)
+    
+    # Set global random seed for replication
+    import transformers
+    transformers.set_seed(RANDOM_SEED)
     
     # Device info
     print("\n🖥️  Device Configuration:")

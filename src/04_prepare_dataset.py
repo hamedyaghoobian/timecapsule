@@ -29,7 +29,8 @@ from tokenizers import Tokenizer
 # Add src to path for config import
 sys.path.insert(0, str(Path(__file__).parent))
 from config import (
-    OUTPUT_DIR, TOKENIZER_DIR, DATASET_DIR, CONTEXT_LENGTH
+    OUTPUT_DIR, TOKENIZER_DIR, DATASET_DIR, CONTEXT_LENGTH,
+    DATASET_VERSION
 )
 
 # ============================================================
@@ -247,6 +248,13 @@ def main():
     # Save
     dataset_output.mkdir(parents=True, exist_ok=True)
     dataset_dict.save_to_disk(str(dataset_output))
+    
+    # Save metadata for replication
+    import json
+    metadata_path = dataset_output / "metadata.json"
+    with open(metadata_path, "w", encoding="utf-8") as f:
+        json.dump({"dataset_version": DATASET_VERSION}, f, indent=2)
+    print(f"   ✅ Saved metadata to: {metadata_path}")
     
     print("\n" + "=" * 60)
     print("DATASET PREPARATION COMPLETE")

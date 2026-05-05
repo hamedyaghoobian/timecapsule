@@ -19,6 +19,12 @@ CHECKPOINT_DIR = OUTPUT_DIR / "checkpoints"
 LOG_DIR = OUTPUT_DIR / "logs"
 
 # ============================================================
+# REPLICATION SETTINGS
+# ============================================================
+RANDOM_SEED = 42
+DATASET_VERSION = "1.0.0"
+
+# ============================================================
 # TOKENIZER SETTINGS
 # ============================================================
 VOCAB_SIZE = 32000              # 32K vocabulary (efficient for 500M model)
@@ -82,6 +88,7 @@ TRAINING_CONFIG = {
     "save_total_limit": 3,
     "logging_steps": 100,
     "eval_steps": 1000,
+    "seed": RANDOM_SEED,
 }
 
 # ============================================================
