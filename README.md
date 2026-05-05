@@ -75,3 +75,9 @@ python src/05_train_model_cuda.py --data_dir data --output_dir outputs
 - **Model Config**: 1.5B params, 2048 ctx length, Flash Attention 2 enabled.
 - **Dataset**: ~240 shards of tokenized historical text.
 - **Tokenizer**: Custom BPE trained on 100M+ tokens of the corpus.
+
+## License & Citation
+
+This project is licensed under the [MIT License](LICENSE).
+
+*(Citation information for the ACM C&C 2026 paper will be added upon publication).*
