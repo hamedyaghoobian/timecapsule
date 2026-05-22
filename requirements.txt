@@ -1,18 +1,11 @@
-# Historical LLM Training Pipeline (1800-1875)
-# Apple Silicon M3 Max with MPS + BFloat16
+# Base dependencies for the local CUDA training scripts in this folder.
+# Install a CUDA-compatible PyTorch build for your specific image/GPU setup.
 
-# Core ML
-torch>=2.9.0
-transformers>=4.50.0
-datasets>=4.0.0
-tokenizers>=0.20.0
-accelerate>=1.0.0
+torch
+transformers
+datasets
+accelerate
+pynvml
 
-# Utilities
-tqdm
-numpy
-pandas
-
-# Analysis
-matplotlib
-seaborn
+# Optional performance dependency used when available by the training script:
+# flash-attn
