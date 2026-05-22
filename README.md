@@ -50,6 +50,8 @@ pip install flash-attn --no-build-isolation
 ## Data Download
 The dataset and tokenizer are hosted on Hugging Face at [postgrammar/london-llm-1800](https://huggingface.co/datasets/postgrammar/london-llm-1800). We have provided a script to download them automatically.
 
+v3 subset is located here: https://huggingface.co/datasets/haykgrigorian/15gb_subset
+
 ```bash
 # Run this script to download ~120GB of data
 # Ensure you have a stable internet connection in the pod
