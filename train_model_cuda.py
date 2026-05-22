@@ -2,6 +2,7 @@
 """
 H100 SXM Optimized LLaMA Training Script (LOCAL-DISK, NO DOWNLOADS)
 ==================================================================
+- This was used to train v2, DO NOT USE AS IS TO TRAIN V3
 Fixes:
 - Uses the already-prepared Arrow shards on disk (NO hub, NO downloads)
 - Single source of truth: imports MODEL_CONFIG / TRAINING_CONFIG from config.py
