@@ -26,13 +26,17 @@ This dataset is intended for research in digital humanities and historical lingu
 If you use this dataset, please cite it as follows:
 
 ```bibtex
-@inproceedings{grigorian2026timecapsule,
-  author = {Hayk Grigorian and Hamed Yaghoobian},
-  title = {TimeCapsule: Generative Hallucination as a Method for Historical Sensemaking},
-  booktitle = {Proceedings of the ACM Creativity and Cognition 2026 Conference},
-  year = {2026},
+@inproceedings{Grigorian_2026,
+  author    = {Grigorian, Hayk and Yaghoobian, Hamed},
+  title     = {TimeCapsule: Generative Hallucination as a Method for Historical Sensemaking},
+  booktitle = {Proceedings of the 2026 Conference on Creativity and Cognition},
+  series    = {C\&C '26},
+  year      = {2026},
+  pages     = {229--238},
   publisher = {ACM},
-  note = {Dataset: \url{https://huggingface.co/datasets/postgrammar/london-llm-1800}}
+  doi       = {10.1145/3803784.3807554},
+  url       = {https://doi.org/10.1145/3803784.3807554},
+  note      = {Dataset: \url{https://huggingface.co/datasets/postgrammar/london-llm-1800}}
 }
 ```
 

@@ -151,8 +151,8 @@ colors = {'accept': '#e8743b', 'reject': '#19aade'}  # Warmer orange, cooler blu
 
 # Left panel: Error comparison
 # Shorten expertise descriptions elegantly
-expert1_short = "Linguistics & Rhetoric"
-expert2_short = "Victorian Literature"
+expert1_short = "Writing Studies & Rhetoric"
+expert2_short = "English Romanticism"
 
 experts_display = [f'{expert1_name}\n({expert1_short})', 
                    f'{expert2_name}\n({expert2_short})']

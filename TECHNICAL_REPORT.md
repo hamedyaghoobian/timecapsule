@@ -834,7 +834,7 @@ random.seed(SEED)
 - Checkpoints include full configuration
 
 ### 9.3 Code Availability
-All code available at: `https://github.com/hamedyaghoobian/london-llm-1800`
+All code available at: `https://github.com/hamedyaghoobian/timecapsule`
 
 ---
 
@@ -877,22 +877,26 @@ This research utilized:
 ## Contact & Citation
 
 For questions or collaborations:
-- Repository: `https://github.com/hamedyaghoobian/london-llm-1800`
+- Repository: `https://github.com/hamedyaghoobian/timecapsule`
 - Model: `https://huggingface.co/haykgrigorian/TimeCapsuleLLM-v2-1800-1875`
 
 **Citation**:
 ```bibtex
-@misc{timecapsule2026,
-  title={TimeCapsule LLM: A Domain-Specific Language Model for Victorian-Era English},
-  author={Yaghoobian, Hamed},
-  year={2026},
-  note={ACM Creativity and Cognition},
-  url={https://github.com/hamedyaghoobian/london-llm-1800}
+@inproceedings{Grigorian_2026,
+  author    = {Grigorian, Hayk and Yaghoobian, Hamed},
+  title     = {TimeCapsule: Generative Hallucination as a Method for Historical Sensemaking},
+  booktitle = {Proceedings of the 2026 Conference on Creativity and Cognition},
+  series    = {C\&C '26},
+  year      = {2026},
+  pages     = {229--238},
+  publisher = {ACM},
+  doi       = {10.1145/3803784.3807554},
+  url       = {https://doi.org/10.1145/3803784.3807554}
 }
 ```
 
 ---
 
-**Document Version**: 1.0  
-**Last Updated**: February 4, 2026  
-**Status**: Complete - Ready for ACM Submission
+**Document Version**: 1.1  
+**Last Updated**: July 14, 2026  
+**Status**: Published at ACM Creativity and Cognition 2026 (C&C '26)

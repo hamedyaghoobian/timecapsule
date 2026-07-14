@@ -179,19 +179,19 @@ def generate_figure2_chronological_cliff():
     """Generate timeline showing training boundary and anachronistic concepts."""
     print("\n📊 Generating: Chronological Cliff...")
     
-    # Load anachronism data
-    data = load_json("anachronism_probe_results.json")
+    # Hardcoded concept list — curated for the figure
+    concepts = [
+        {"name": "Telephone",           "year": 1876},
+        {"name": "Electric Light",      "year": 1879},
+        {"name": "Gasoline Automobile", "year": 1886},
+        {"name": "Airplane",            "year": 1903},
+        {"name": "Radio",               "year": 1920},
+        {"name": "Television",          "year": 1927},
+        {"name": "Electronic Computer", "year": 1945},
+        {"name": "Internet",            "year": 1969},
+    ]
     
-    # Extract concepts with invention dates
-    concepts = []
-    for item in data:
-        if item["invented"] > 1875:
-            concepts.append({
-                "name": item["concept"].title(),
-                "year": item["invented"],
-            })
-    
-    # Sort by year
+    # Sort by year (already sorted, but be safe)
     concepts = sorted(concepts, key=lambda x: x["year"])
     
     # Create figure
@@ -234,7 +234,7 @@ def generate_figure2_chronological_cliff():
         ax.plot([cliff_year, cliff_year], [h, cliff_heights[i+1]],
                 color=COLORS['cliff'], linewidth=3, alpha=alpha, zorder=3)
     
-    # Cliff marker
+    # Cliff marker and label
     ax.scatter([cliff_year], [y_timeline], s=150, c=COLORS['cliff'], 
                marker='|', linewidths=3, zorder=4)
     ax.text(cliff_year, 0.87, '1875', ha='center', fontsize=10, 
@@ -268,17 +268,17 @@ def generate_figure2_chronological_cliff():
                    fontsize=8, va='center', ha=ha, color='#333333')
     
     # Title
-    ax.set_title('The Chronological Cliff: Training Data Boundary', 
+    ax.set_title('The Epistemological Event Horizon', 
                  fontsize=11, fontweight='bold', pad=15)
     
     # Clean up axes
     ax.set_xlim(year_start - 10, year_end + 10)
-    ax.set_ylim(-0.02, 0.95)
+    ax.set_ylim(-0.02, 1.0)
     ax.axis('off')
     
     # Subtitle/caption
     ax.text(0.5, -0.02, 
-            'Concepts invented after 1875 fall outside the model\'s epistemological horizon',
+            'Post-1875 technologies and meanings fall outside the model\'s training horizon',
             transform=ax.transAxes, ha='center', fontsize=9, style='italic', color='#666666')
     
     plt.tight_layout()
@@ -598,6 +598,7 @@ def generate_figure5_perplexity():
     ax.set_ylabel('Perplexity', fontsize=10)
     ax.set_xlabel('')
     ax.set_title('Perplexity on Victorian Test Set', fontsize=11, fontweight='bold', pad=10)
+    plt.xticks(rotation=25, ha='right')
     
     # Clean up
     ax.spines['top'].set_visible(False)
