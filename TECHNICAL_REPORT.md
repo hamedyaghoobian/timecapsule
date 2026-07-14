@@ -881,19 +881,7 @@ For questions or collaborations:
 - Model: `https://huggingface.co/haykgrigorian/TimeCapsuleLLM-v2-1800-1875`
 
 **Citation**:
-```bibtex
-@inproceedings{Grigorian_2026,
-  author    = {Grigorian, Hayk and Yaghoobian, Hamed},
-  title     = {TimeCapsule: Generative Hallucination as a Method for Historical Sensemaking},
-  booktitle = {Proceedings of the 2026 Conference on Creativity and Cognition},
-  series    = {C\&C '26},
-  year      = {2026},
-  pages     = {229--238},
-  publisher = {ACM},
-  doi       = {10.1145/3803784.3807554},
-  url       = {https://doi.org/10.1145/3803784.3807554}
-}
-```
+The paper is published in the ACM Digital Library: [https://dl.acm.org/doi/10.1145/3803784.3807554](https://dl.acm.org/doi/10.1145/3803784.3807554)
 
 ---
 

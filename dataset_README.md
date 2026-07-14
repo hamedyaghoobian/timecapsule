@@ -22,23 +22,7 @@ This dataset consists of approximately 90GB of cleaned English text derived from
 ## Usage
 This dataset is intended for research in digital humanities and historical linguistics.
 
-## Citation
-If you use this dataset, please cite it as follows:
-
-```bibtex
-@inproceedings{Grigorian_2026,
-  author    = {Grigorian, Hayk and Yaghoobian, Hamed},
-  title     = {TimeCapsule: Generative Hallucination as a Method for Historical Sensemaking},
-  booktitle = {Proceedings of the 2026 Conference on Creativity and Cognition},
-  series    = {C\&C '26},
-  year      = {2026},
-  pages     = {229--238},
-  publisher = {ACM},
-  doi       = {10.1145/3803784.3807554},
-  url       = {https://doi.org/10.1145/3803784.3807554},
-  note      = {Dataset: \url{https://huggingface.co/datasets/postgrammar/london-llm-1800}}
-}
-```
+If you use this dataset, please find the citation/link to the ACM Digital Library here: [https://dl.acm.org/doi/10.1145/3803784.3807554](https://dl.acm.org/doi/10.1145/3803784.3807554)
 
 ## License
 Open Data Commons Attribution License (ODC-By) v1.0

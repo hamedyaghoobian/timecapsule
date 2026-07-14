@@ -82,18 +82,4 @@ python src/05_train_model_cuda.py --data_dir data --output_dir outputs
 
 This project is licensed under the [MIT License](LICENSE).
 
-If you use this work in your research, please cite our paper:
-
-```bibtex
-@inproceedings{Grigorian_2026,
-  author    = {Grigorian, Hayk and Yaghoobian, Hamed},
-  title     = {TimeCapsule: Generative Hallucination as a Method for Historical Sensemaking},
-  booktitle = {Proceedings of the 2026 Conference on Creativity and Cognition},
-  series    = {C\&C '26},
-  year      = {2026},
-  pages     = {229--238},
-  publisher = {ACM},
-  doi       = {10.1145/3803784.3807554},
-  url       = {https://doi.org/10.1145/3803784.3807554}
-}
-```
+If you use this work in your research, please cite our paper. The publication is available in the ACM Digital Library: [https://dl.acm.org/doi/10.1145/3803784.3807554](https://dl.acm.org/doi/10.1145/3803784.3807554)
