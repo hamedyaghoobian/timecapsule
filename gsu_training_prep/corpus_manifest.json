@@ -1,0 +1,186 @@
+{
+  "manifest_name": "TimeCapsuleLLM v3 final transfer manifest",
+  "updated_date": "2026-07-05",
+  "status": "final package corrected; confirmed post-1875 files removed from sources and shards; removed telephone-containing 1883 London Telephone Exchange file from v2/source metadata on 2026-07-05",
+  "package_root": ".",
+  "date_range_policy": "Primary target range is 1800-1875. Chronicling America restricted extraction covers 1800-1859.",
+  "primary_language": "English",
+  "package_summary": {
+    "source_files": 241894,
+    "source_bytes": 159036129719,
+    "source_gb_decimal": 159.03613,
+    "package_files_before_checksum": 245946,
+    "package_bytes_before_checksum": 165936732923,
+    "final_package_files": 245947,
+    "final_package_bytes": 165974497672,
+    "final_package_gb_decimal": 165.974498
+  },
+  "token_estimate_summary": {
+    "approved_transfer_estimate_tokens": 39031191729,
+    "approved_transfer_estimate_tokens_billion": 39.031191729,
+    "display_rounding_used_in_readme": "approximately 39.0 billion",
+    "method": "Corrected 2026-07-05 after deleting one remaining post-1875 London source file containing an 1883 telephone passage; London estimate recomputed from original London tokens-per-byte density, other source estimates unchanged."
+  },
+  "included_sources": [
+    {
+      "source_name": "london_v2_cleaned_txt",
+      "category": "London 1800-1875 cleaned text corpus",
+      "package_relative_path": "sources/london_v2_cleaned_txt",
+      "file_format": "txt",
+      "files": 132305,
+      "bytes": 89394816187,
+      "gb_decimal": 89.394816,
+      "date_range": "1800-1875",
+      "record_count": 132305,
+      "estimated_tokens": 22423466147,
+      "cleaning_status": "included in final package; cleaned corpus with boilerplate stripping; confirmed post-1875 files removed 2026-07-01; removed remaining 1883 telephone file 2026-07-05",
+      "token_estimate_note": "Recomputed 2026-07-05 after deleting one remaining post-1875 file, preserving original London tokens-per-byte density."
+    },
+    {
+      "source_name": "city_corpora_cleaned_txt",
+      "category": "Multi-city books and texts",
+      "package_relative_path": "sources/city_corpora_cleaned_txt",
+      "file_format": "txt",
+      "files": 109490,
+      "bytes": 55186381124,
+      "gb_decimal": 55.186381,
+      "date_range": "1800-1875",
+      "estimated_tokens": 13146827944,
+      "subdirectories": [
+        "baltimore",
+        "belfast",
+        "birmingham",
+        "boston",
+        "chicago",
+        "dublin",
+        "edinburgh",
+        "liverpool",
+        "manchester",
+        "new_york",
+        "philadelphia",
+        "washington_dc"
+      ],
+      "cleaning_status": "included in final package; temporal quarantine and targeted boilerplate stripping already applied",
+      "record_count": 109490
+    },
+    {
+      "source_name": "lwm_strict_newspapers",
+      "category": "Living with Machines British newspapers",
+      "package_relative_path": "sources/lwm_strict_newspapers/lwm_articles_1800_1875_article_ocr080_words100.csv.gz",
+      "file_format": "csv.gz",
+      "files": 1,
+      "bytes": 1263643395,
+      "gb_decimal": 1.263643,
+      "date_range": "1800-1875",
+      "record_count": 535882,
+      "estimated_tokens": 793662715,
+      "cleaning_status": "included in final package; strict date and OCR-quality filtered subset"
+    },
+    {
+      "source_name": "chronicling_america_langfiltered_prose",
+      "category": "US regional newspaper prose blocks",
+      "package_relative_path": "sources/chronicling_america_langfiltered_prose",
+      "file_format": "jsonl",
+      "data_files": 96,
+      "support_files": 1,
+      "bytes": 1720178962,
+      "gb_decimal": 1.720179,
+      "date_range": "1800-1859",
+      "record_count": 903599,
+      "estimated_tokens": 357171910,
+      "cleaning_status": "included in final package; prose extraction, ad filtering, and language filtering already applied",
+      "notes": [
+        "Twelve shard files are intentionally zero-byte because some shard IDs had no surviving prose after filtering.",
+        "language_filter_manifest.json is retained alongside the shard set for provenance."
+      ],
+      "files": 97
+    },
+    {
+      "source_name": "internet_archive_postfiltered_prose",
+      "category": "Internet Archive 1800-1875 English prose blocks",
+      "package_relative_path": "sources/internet_archive_postfiltered_prose/ia_extracted_prose_blocks_postfiltered_boilerplate_stripped.jsonl",
+      "file_format": "jsonl",
+      "files": 1,
+      "bytes": 11471110051,
+      "gb_decimal": 11.47111,
+      "date_range": "1800-1875",
+      "record_count": 5073952,
+      "estimated_tokens": 2310063013,
+      "cleaning_status": "included in final package; postfiltered and boilerplate stripped"
+    }
+  ],
+  "tokenizer_reference": {
+    "status": "included",
+    "package_relative_path": "tokenizer_reference/tokenizer_v3",
+    "algorithm": "HuggingFace tokenizers ByteLevel BPE",
+    "vocab_size": 32000,
+    "min_frequency": 2,
+    "special_tokens": [
+      "<s>",
+      "</s>",
+      "<unk>",
+      "<pad>",
+      "<|year|>",
+      "<|title|>"
+    ]
+  },
+  "excluded_not_staged_sources": [
+    {
+      "source_name": "trove_australia_newspapers",
+      "status": "not included in package",
+      "reason": "Pipeline was prepared but no harvested data was staged."
+    }
+  ],
+  "validation": {
+    "checksums_path": "checksums_sha256.txt",
+    "inventory_path": "source_inventory.tsv",
+    "date_audit_path": "validation/date_audit_20260608.json",
+    "boilerplate_audit_summary_path": "validation/boilerplate_audit_summary.json",
+    "size_audit_path": "validation/corpus_size_audit.tsv",
+    "spot_check_report_path": "validation/spot_check_report.json",
+    "spot_check_summary": {
+      "groups_checked": 16,
+      "samples_checked": 160,
+      "readable_samples": 160,
+      "unreadable_samples": 0
+    },
+    "post1875_correction_summary_path": "validation/post1875_audit_20260621_safe/post1875_summary.json",
+    "post1875_metadata_year_audit_path": "validation/post1875_audit_20260621_safe/metadata_year_audit.json"
+  },
+  "notes": [
+    "This manifest describes the transferred package itself and intentionally uses package-relative paths.",
+    "The older staging/planning manifest from the build phase has been replaced here by this final transfer manifest.",
+    "The 40.6B token figure supersedes older 37.9B to 38.4B planning totals because it uses the approved v3 tokenizer dry run and direct London recalibration.",
+    "checksums_sha256.txt intentionally excludes a checksum entry for itself."
+  ],
+  "corrections": [
+    {
+      "date": "2026-06-21",
+      "action": "surgical_metadata_finalize_after_post1875_quarantine",
+      "quarantine_path": "quarantine_post1875_20260621",
+      "findings_by_source": {
+        "london_v2_cleaned_txt": {
+          "items": 79,
+          "bytes": 641188463
+        }
+      },
+      "removed_from_inventory": 0,
+      "source_files_after": 245854,
+      "source_bytes_after": 165259916463,
+      "source_gb_decimal_after": 165.259916,
+      "approved_transfer_estimate_tokens_after": 40435458769,
+      "approved_transfer_estimate_tokens_billion_after": 40.435458769,
+      "notes": [
+        "Only 79 confirmed London files with leading publication years greater than 1875 remain quarantined.",
+        "The 22 city files initially moved by year-like archive identifiers were restored after manual header spot checks.",
+        "No IA, Chronicling America, or LWM files were replaced in this correction pass."
+      ]
+    }
+  ],
+  "post1875_removal": {
+    "date": "2026-07-01",
+    "deleted_london_files": 3959,
+    "deleted_london_source_bytes": 6223534909,
+    "method": "filename post-1875 year plus matching header/opening post-1875 year"
+  }
+}

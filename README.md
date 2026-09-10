@@ -4,6 +4,45 @@
 
 This repository contains the official code, dataset, and models for our paper **"TimeCapsule: Generative Hallucination as a Method for Historical Sensemaking"**, published in the **Proceedings of the 2026 ACM Conference on Creativity and Cognition (C&C '26)** ([https://dl.acm.org/doi/10.1145/3803784.3807554](https://dl.acm.org/doi/10.1145/3803784.3807554)). It includes the training pipeline for a 1.5B parameter language model trained on 90GB of historical English text (1800-1875).
 
+## Current v3 / GSU Training Handoff
+
+The current TimeCapsuleLLM v3 handoff materials for Georgia State University are
+in [`gsu_training_prep/`](gsu_training_prep/). This folder is the starting point
+for the next training run.
+
+Current v3 status:
+
+- The v3 corpus is cleaned, validated, sharded, and uploaded as raw text.
+- The v3 tokenizer is trained and included in `gsu_training_prep/tokenizer_v3/`.
+- The full corpus is **not tokenized yet** and **not packed yet**.
+- GSU should run tokenization/packing first, then a smoke test, then training.
+- Intended first full target: roughly 2B parameters, 4096-token context,
+  3 x NVIDIA L40 48GB.
+
+Current v3 dataset links:
+
+- Full v3 corpus: [haykgrigorian/english-historical-corpus-1800-1875](https://huggingface.co/datasets/haykgrigorian/english-historical-corpus-1800-1875)
+- 15GB sample: [haykgrigorian/english-historical-corpus-1800-1875-15GB-sample](https://huggingface.co/datasets/haykgrigorian/english-historical-corpus-1800-1875-15GB-sample)
+
+Final v3 corpus snapshot:
+
+- 164 compressed `.jsonl.gz` shards
+- 6,755,308 records
+- 159.0GB corrected source text represented
+- 65.2GB compressed shard release
+- Approximately 39.0B tokens with the approved v3 tokenizer
+
+For GSU, begin with:
+
+```bash
+cd gsu_training_prep
+sbatch submit_tokenize_v3.slurm
+sbatch submit_smoke_train_v3.slurm
+```
+
+Only submit `submit_train_v3_2b.slurm` after tokenization and the smoke test
+both pass.
+
 ## Replication & Paper Resources
 
 All code, tokenizer artifacts, cleaned corpus documentation, and model checkpoints are available at [https://github.com/hamedyaghoobian/timecapsule.git](https://github.com/hamedyaghoobian/timecapsule.git). Random seeds, dataset versions, and training configurations are fixed to support replication.

@@ -1,0 +1,14 @@
+# Core training / preprocessing dependencies
+torch
+transformers
+datasets
+tokenizers
+accelerate
+safetensors
+pynvml
+tqdm
+numpy
+huggingface_hub
+
+# Optional performance dependency for compatible CUDA images:
+# flash-attn

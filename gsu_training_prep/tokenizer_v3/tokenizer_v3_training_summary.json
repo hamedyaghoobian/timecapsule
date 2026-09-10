@@ -1,0 +1,36 @@
+{
+  "event": "tokenizer_training_complete",
+  "created_at": "2026-05-27 03:02:47",
+  "input": "D:\\TimeCapsuleLLM_v3\\tokenizer_training_sample_v3\\tokenizer_train_v3.txt",
+  "input_bytes": 19146303697,
+  "output_dir": "D:\\TimeCapsuleLLM_v3\\tokenizer_v3",
+  "algorithm": "ByteLevel BPE",
+  "vocab_size_requested": 32000,
+  "vocab_size_actual": 32000,
+  "min_frequency": 2,
+  "special_tokens": [
+    "<s>",
+    "</s>",
+    "<unk>",
+    "<pad>",
+    "<|year|>",
+    "<|title|>"
+  ],
+  "special_token_ids": {
+    "<s>": 0,
+    "</s>": 1,
+    "<unk>": 2,
+    "<pad>": 3,
+    "<|year|>": 4,
+    "<|title|>": 5
+  },
+  "elapsed_seconds": 11851.1,
+  "elapsed_minutes": 197.52,
+  "files": [
+    "merges.txt",
+    "special_tokens_map.json",
+    "tokenizer.json",
+    "tokenizer_config.json",
+    "vocab.json"
+  ]
+}
