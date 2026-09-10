@@ -1,9 +1,9 @@
 {
   "event": "tokenizer_training_complete",
   "created_at": "2026-05-27 03:02:47",
-  "input": "D:\\TimeCapsuleLLM_v3\\tokenizer_training_sample_v3\\tokenizer_train_v3.txt",
+  "input": "20GB stratified v3 tokenizer training sample prepared from the final corpus sources",
   "input_bytes": 19146303697,
-  "output_dir": "D:\\TimeCapsuleLLM_v3\\tokenizer_v3",
+  "output_dir": "gsu_training_prep/tokenizer_v3",
   "algorithm": "ByteLevel BPE",
   "vocab_size_requested": 32000,
   "vocab_size_actual": 32000,

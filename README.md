@@ -54,8 +54,10 @@ All code, tokenizer artifacts, cleaned corpus documentation, and model checkpoin
 - **Local Model Checkpoints**: [`outputs/checkpoints/`](outputs/checkpoints/)
 
 ### Hosted Assets (Hugging Face):
-- **Trained Model (0.5 Epochs)**: [haykgrigorian/TimeCapsuleLLM-v2-llama-1.2B](https://huggingface.co/haykgrigorian/TimeCapsuleLLM-v2-llama-1.2B)
-- **Tokenized Dataset**: [postgrammar/london-llm-1800](https://huggingface.co/datasets/postgrammar/london-llm-1800)
+- **Current v3 Raw Corpus**: [haykgrigorian/english-historical-corpus-1800-1875](https://huggingface.co/datasets/haykgrigorian/english-historical-corpus-1800-1875)
+- **Current v3 15GB Sample**: [haykgrigorian/english-historical-corpus-1800-1875-15GB-sample](https://huggingface.co/datasets/haykgrigorian/english-historical-corpus-1800-1875-15GB-sample)
+- **Legacy v2 Model (0.5 Epochs)**: [haykgrigorian/TimeCapsuleLLM-v2-llama-1.2B](https://huggingface.co/haykgrigorian/TimeCapsuleLLM-v2-llama-1.2B)
+- **Legacy v2 Tokenized Dataset**: [postgrammar/london-llm-1800](https://huggingface.co/datasets/postgrammar/london-llm-1800)
 
 ## RunPod Setup Guide
 
@@ -87,9 +89,21 @@ pip install flash-attn --no-build-isolation
 ```
 
 ## Data Download
-The dataset and tokenizer are hosted on Hugging Face at [postgrammar/london-llm-1800](https://huggingface.co/datasets/postgrammar/london-llm-1800). We have provided a script to download them automatically.
+For v3, use the GSU handoff folder:
 
-v3 subset is located here: https://huggingface.co/datasets/haykgrigorian/15gb_subset
+```bash
+cd gsu_training_prep
+./download_dataset_from_hf.sh /scratch/$USER/timecapsule_v3/raw_shards
+```
+
+The full v3 corpus is hosted on Hugging Face at
+[haykgrigorian/english-historical-corpus-1800-1875](https://huggingface.co/datasets/haykgrigorian/english-historical-corpus-1800-1875).
+
+The 15GB sample is hosted at
+[haykgrigorian/english-historical-corpus-1800-1875-15GB-sample](https://huggingface.co/datasets/haykgrigorian/english-historical-corpus-1800-1875-15GB-sample).
+
+The older `postgrammar/london-llm-1800` dataset is a legacy v2 London-only
+asset and is not the v3 corpus.
 
 ```bash
 # Run this script to download ~120GB of data

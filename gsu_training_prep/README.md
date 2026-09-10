@@ -18,9 +18,11 @@ notes.
 ## Final Corpus Snapshot
 
 - Dataset: TimeCapsuleLLM World English 1800-1875
-- Hugging Face dataset repo: `haykgrigorian/TimeCapsuleLLM-World-English-1800-1875`
-- Local source package: `D:\TimeCapsuleLLM_v3\corpus_final`
-- Local sharded corpus: `D:\TimeCapsuleLLM_v3\corpus_final\sharded_jsonl_v1\shards`
+- Hugging Face dataset repo:
+  `haykgrigorian/english-historical-corpus-1800-1875`
+- Hugging Face sample repo:
+  `haykgrigorian/english-historical-corpus-1800-1875-15GB-sample`
+- Corpus shard path after download: `raw_shards/*.jsonl.gz`
 - Shards: 164 compressed `.jsonl.gz` files
 - Records: 6,755,308
 - Corrected source text represented: 159,036,129,719 bytes, about 159.0 GB
@@ -28,9 +30,7 @@ notes.
 - Approved token estimate with tokenizer v3: 39,031,191,729 tokens, about 39.0B
 - Date range: 1800-1875, except Chronicling America restricted to 1800-1859
 
-The final manifest is stored in the main corpus package at
-`corpus_final/corpus_manifest.json`. A copy should be kept with any cluster
-transfer.
+The final manifest is included in this bundle as `corpus_manifest.json`.
 
 ## Tokenizer Snapshot
 
@@ -75,7 +75,7 @@ run is therefore approximately one pass over the 39.0B-token corpus.
 
 ## Critical Order Of Operations
 
-1. Transfer or download the raw sharded corpus.
+1. Download the raw sharded corpus from Hugging Face.
 2. Install dependencies in a clean environment.
 3. Run tokenization/packing to fixed 4096-token Arrow shards.
 4. Confirm `preprocessing_summary.json` and run a small decode/schema check.

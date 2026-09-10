@@ -10,9 +10,8 @@ corpus still needs to be tokenized and packed before training.
 
 Required inputs on the cluster:
 
-- Raw corpus shards from `haykgrigorian/TimeCapsuleLLM-World-English-1800-1875`
-  or from the transferred local folder:
-  `corpus_final/sharded_jsonl_v1/shards/*.jsonl.gz`
+- Raw corpus shards from
+  `haykgrigorian/english-historical-corpus-1800-1875`
 - Tokenizer folder from this bundle:
   `tokenizer_v3/`
 - Training scripts from this bundle.
@@ -205,9 +204,13 @@ torchrun --nproc_per_node=3 train_model_cuda_v3.py \
 - Question-answer fine-tuning is separate from pretraining. The v3 base model
   should be pretrained first; instruction/Q&A fine-tuning can follow.
 
-## 9. Known Non-Blocking Documentation Issue
+## 9. Hugging Face Dataset Links
 
-The sharded dataset README in the corpus package may contain stale per-source
-breakdown lines from before the final July 2026 post-1875 cleanup. The current
-source of truth is `corpus_final/corpus_manifest.json`, with approximately
-159.0 GB represented source text and 39.031B estimated tokens.
+- Full corpus:
+  `https://huggingface.co/datasets/haykgrigorian/english-historical-corpus-1800-1875`
+- 15GB sample:
+  `https://huggingface.co/datasets/haykgrigorian/english-historical-corpus-1800-1875-15GB-sample`
+
+The source of truth for corrected corpus totals is the included
+`corpus_manifest.json`, with approximately 159.0 GB represented source text and
+39.031B estimated tokens.

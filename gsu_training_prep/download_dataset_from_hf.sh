@@ -10,7 +10,7 @@ set -euo pipefail
 # Public repos may not need HF_TOKEN, but setting it is harmless.
 
 DEST="${1:-/scratch/$USER/timecapsule_v3/raw_shards}"
-REPO_ID="${REPO_ID:-haykgrigorian/TimeCapsuleLLM-World-English-1800-1875}"
+REPO_ID="${REPO_ID:-haykgrigorian/english-historical-corpus-1800-1875}"
 TMP_DIR="${DEST}.hf_download"
 
 mkdir -p "$DEST" "$TMP_DIR"

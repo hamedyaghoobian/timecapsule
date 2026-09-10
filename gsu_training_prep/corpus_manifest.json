@@ -150,7 +150,7 @@
   "notes": [
     "This manifest describes the transferred package itself and intentionally uses package-relative paths.",
     "The older staging/planning manifest from the build phase has been replaced here by this final transfer manifest.",
-    "The 40.6B token figure supersedes older 37.9B to 38.4B planning totals because it uses the approved v3 tokenizer dry run and direct London recalibration.",
+    "The corrected final v3 handoff estimate is 39.031B tokens after the July 2026 post-1875 and telephone cleanup. Older 40.6B planning/card figures should be treated as superseded.",
     "checksums_sha256.txt intentionally excludes a checksum entry for itself."
   ],
   "corrections": [
